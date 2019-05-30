@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <title>Startseite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/lax.min.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("main").classList.add("loaded")
+
+            lax.setup()
+
+            const update = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(update)
+            }
+
+            window.requestAnimationFrame(update)
+        }
+    </script>
+</head>
+
+<body id="main">
+    <section class="section_One">
+        <div class="container-fluid lax" id="stars" data-lax-opacity="1 1, 460 0">
+            <div class="row index__spaceship-row">
+
+                <div class="lax col-6 middle_spaceship" data-lax-translate-y="0 0, 420 520"
+                    data-lax-opacity="1 1, 460 0">
+                    <img class="index__spaceship-img" src="media/spaceship/spaceShip.png">
+                </div>
+                <div class="lax col-6" data-lax-translate-y="0 0, 420 520" data-lax-opacity="1 1, 460 0">
+                    <img class="index__middle_Talk-img" src="media/spaceship/Talk.png">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="section_Two">
+        <div class="container-fluid lax" data-lax-opacity="(vh) 1, (vh*0.1) 0">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="index_Pic_One">
+
+                    </div>
+                </div>
+                <div class="col-md-6 einleitungsText_ueberMich">
+                        <h1>Hamedk Sadegh</h1>
+                        <h4 class="fliessText">
+                            Mein Name ist Hamed Sadegh und studiere Medieninformatik an 
+                            der Westfälischen Hochschule in Gelsenkirchen. Im 6. Semester (Sommersemester) 
+                            soll ich ein Pflicht Praktikum für 3 Monaten besuchen.<br>
+                            Daher bin ich schon ab jetzt auf der Suche nach einer Praktikumstelle.<br>
+                            Meine Stärke ist in Java Programmierung aber ich habe auch kein Problem 
+                            mit anderen Sprachen arbeiten.<br>
+                            Also ich bin flexibel und offen für neue Erfahrungen sammeln, und wenn 
+                            ich eine Aufgabe habe, fühle ich mich verantwortlich, die Aufgabe erfolgreich zu beenden.<br>
+                            Ich freue mich sehr, wenn Sie mir die Praktikumstelle anbieten können, dass ich 
+                            bei Ihnen neue Erfahrungen sammeln kann, welche mich zu meiner beruflichen Zukunft führen.<br>
+                            Und zum Anschluss des Praktikums würde ich meine Bachelor Arbeit bei Ihnen 
+                            schreiben, wenn es möglich wäre.<br>
+                            Und nun kommt Ihre Feedback, bitte Klicken Sie auf das Button, damit Sie 
+                            auf Feedbackseite weitergeleitet werden.<br>
+                            Ich bedanke mich bei Ihnen für Ihre Unterstützung. Viel Spaß :)
+                        </h4>
+                    
+                        <a href="feedback.html">
+                                <div class="scrollDown_Icon"></div>
+                        </a>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- <section class="section_Three container-fluid">
+            <div class="row">
+                    <canvas class="matrix_Canva" id="c">
+                        </canvas>
+            </div>
+        
+        </div>
+        <script>
+            // geting canvas by id c
+            var c = document.getElementById("c");
+            var ctx = c.getContext("2d");
+
+            //making the canvas full screen
+            c.height = window.innerHeight;
+            c.width = window.innerWidth;
+
+            //chinese characters - taken from the unicode charset
+            var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+            //converting the string into an array of single characters
+            matrix = matrix.split("");
+
+            var font_size = 10;
+            var columns = c.width / font_size; //number of columns for the rain
+            //an array of drops - one per column
+            var drops = [];
+            //x below is the x coordinate
+            //1 = y co-ordinate of the drop(same for every drop initially)
+            for (var x = 0; x < columns; x++)
+                drops[x] = 1;
+
+            //drawing the characters
+            function draw() {
+                //Black BG for the canvas
+                //translucent BG to show trail
+                ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+                ctx.fillRect(0, 0, c.width, c.height);
+
+                ctx.fillStyle = "#e6ffe61c"; //green text
+                ctx.font = font_size + "px arial";
+                //looping over drops
+                for (var i = 0; i < drops.length; i++) {
+                    //a random chinese character to print
+                    var text = matrix[Math.floor(Math.random() * matrix.length)];
+                    //x = i*font_size, y = value of drops[i]*font_size
+                    ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+                    //sending the drop back to the top randomly after it has crossed the screen
+                    //adding a randomness to the reset to make the drops scattered on the Y axis
+                    if (drops[i] * font_size > c.height && Math.random() > 0.975)
+                        drops[i] = 0;
+
+                    //incrementing Y coordinate
+                    drops[i]++;
+                }
+            }
+
+            setInterval(draw, 35);
+        </script>
+    </section> -->
+</body>
+
+</html>
