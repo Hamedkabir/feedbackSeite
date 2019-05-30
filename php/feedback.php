@@ -8,44 +8,53 @@ $kreativitaet_note=$_POST['auswertung'];
 $hamed_accept=$_POST['hamed_accept'];
 $feedback_else=$_POST['feedback_else'];
 
+$message_note_inhalt="";
+$message_kreativitaet_note="";
+$message_hamed_accept="";
 
 //Hier werden paar Fälle definiert, welche Feedback etwas auswertet
 if(isset($note_inhalt)){
     if($note_inhalt == "1"){
-
+        $message_note_inhalt = "Note 1 ist eine super Note, das freut mich, dass es Ihnen den Inhalt gefallen hat";
     }else if($note_inhalt == "2"){
-
+        $message_note_inhalt = "Note 2 ist wirklich auch gut, dankeschön :)";
     }else if($note_inhalt == "3"){
-
+        $message_note_inhalt = "Note 3 ist Mittelwert, aber trotzdem vielen Danke ;)";
     }else if($note_inhalt == "4"){
-
+        $message_note_inhalt = "Note 4 zeigt mir, anscheinend habe ich was nicht richtig gemacht, ich gibe mir mehr Mühe";
     }else if($note_inhalt == "5"){
-
+        $message_note_inhalt = "Note 5 zeigt, dass es Ihnen nicht so besonders gefallen hat, ich muss mir mehr Mühe geben";
     }else if($note_inhalt == "6"){
-
+        $message_note_inhalt = "Note 6 enttäuscht mich ein bisschen, ich werde mit meinem Fehlern kämpfen. Danke trotzdem :)";
     }
+}else {
+    $note_inhalt = "Es wurde keine Note gegeben! :(";
 }
 
 if(isset($kreativitaet_note)){
     if($kreativitaet_note<=30 && $kreativitaet_note>=0){
-
+        $message_kreativitaet_note = "Das heißt, ich bin so schlechter Designer und nicht kreative :(";
     }else if($kreativitaet_note<=60 && $kreativitaet_note>=31){
-
+        $message_kreativitaet_note = "Das ist nicht schlecht, ich bin zufrieden dankeschön :)";
     }else if($kreativitaet_note<=100 && $kreativitaet_note>=61){
-
+        $message_kreativitaet_note = "das ist eine perfekte Note, das motiviert mich weiter so machen :D";
     }
+}else {
+    $kreativitaet_note = "Es wurde keine Note gegeben! :(";
 }
 
 if(isset($hamed_accept)){
     if($hamed_accept == "yes"){
-
+        $message_hamed_accept = "YUPIIIIIIIII ich habe es endlich geschaft, danke für die Chance";
     }else if($hamed_accept == "no"){
-
+        $message_hamed_accept = "kein Problem, ich werde nicht so leicht aufgeben, ich gibe mir mehr Mühe";
     }
+}else {
+    $hamed_accept = "War das nicht ausreichen, um mir zumindest Ja oder Nein sagen! :(";
 }
 
-if(isset($feedback_else)){
-
+if(!isset($feedback_else)){
+    $feedback_else = "Es gab keine weitere Kommentare!";
 }
 ?>
 
@@ -114,7 +123,9 @@ if(isset($feedback_else)){
                         Inhalt Note:
                     </div>
                     <div class="col-6 feedbackPHP__col6">
-                        <?php echo $note_inhalt ?>
+                        <?php 
+                        echo '<p>' . $note_inhalt . '</p><br>' . $message_note_inhalt;   
+                        ?>
                     </div>
                 </div>
                 <div class="row feedbackPHP__table-rows">
@@ -122,7 +133,9 @@ if(isset($feedback_else)){
                         Kreativität Note:
                     </div>
                     <div class="col-6 feedbackPHP__col6">
-                        <?php echo $kreativitaet_note ?>
+                        <?php 
+                        echo '<p>' . $kreativitaet_note . '</p><br>' . $message_kreativitaet_note;
+                        ?>
                     </div>
                 </div>
                 <div class="row feedbackPHP__table-rows">
@@ -130,7 +143,9 @@ if(isset($feedback_else)){
                         Hamed Note:
                     </div>
                     <div class="col-6 feedbackPHP__col6">
-                        <?php echo $hamed_accept ?>
+                        <?php 
+                        echo '<p>' . $hamed_accept . '</p><br>' . $message_hamed_accept;
+                         ?>
                     </div>
                 </div>
                 <div class="row feedbackPHP__table-rows">

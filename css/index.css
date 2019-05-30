@@ -208,6 +208,11 @@ section {
 
 }
 
+.feedback__textarea {
+  width: 100%;
+  height: 14vh;
+}
+
 .feedback__button {
   color: white;
   background-color: #000;
