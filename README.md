@@ -22,3 +22,5 @@ Diese Website wurde von Hamed Sadegh entwickelt ©2019
 - Firefox
 ##WebAPP
 - die Webseite ist völlig responsive, also nach prinzip mobile first ist gebaut
+###Webseite
+- ist auch erreichbar unter: hamedkabir.bplaced.net
