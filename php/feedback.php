@@ -27,7 +27,7 @@ if(isset($note_inhalt)){
     }else if($note_inhalt == "6"){
         $message_note_inhalt = "Note 6 enttäuscht mich ein bisschen, ich werde mit meinem Fehlern kämpfen. Danke trotzdem :)";
     }
-}else {
+}else{
     $note_inhalt = "Es wurde keine Note gegeben! :(";
 }
 
@@ -53,9 +53,10 @@ if(isset($hamed_accept)){
     $hamed_accept = "War das nicht ausreichen, um mir zumindest Ja oder Nein sagen! :(";
 }
 
-if(!isset($feedback_else)){
+if(empty($feedback_else)){
     $feedback_else = "Es gab keine weitere Kommentare!";
 }
+
 ?>
 
 <html>
@@ -158,11 +159,9 @@ if(!isset($feedback_else)){
                 </div>
                 <div class="row" style="margin-bottom: 20px">
                     <div class="col-6">
-                            <!-- <input name="bestaetigen" class="feedbackPHP__button-bestaetigen" type="button" value="Bestätigen"> -->
                             <a href="../erfolg.html" class="feedbackPHP__bestaetigen">Bestätigen</a>
                     </div>
                     <div class="col-6">
-                            <!-- <input name="abbrechen" class="feedbackPHP__button-abbrechen" type="button" value="Abbrechen"> -->
                             <a href="../index.html" class="feedbackPHP__abbrechen">Abbrechen</a>
                     </div>
                 </div>
