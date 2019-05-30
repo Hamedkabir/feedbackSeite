@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>Feedback</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <p class="feedback__first-text">Feedback Formulare:</p>
+                <form action="./php/feedback.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feedback__form">
+                                <label>Anrede:</label>
+                                <select name="anrede">
+                                    <option value="Herr">Herr</option>
+                                    <option value="Frau">Frau</option>
+                                    <option value="Dr.">Dr.</option>
+                                    <option value="Prof.">Prof.</option>
+                                </select>
+                            </div>
+                            <div class="feedback__form">
+                                <label for="vorname">Vorname:</label>
+                                <input type="text" name="vorname" autofocus required>
+                            </div>
+                            <div class="feedback__form">
+                                <label for="nachname">Nachname:</label>
+                                <input type="text" name="nachname" autofocus required>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feedback__form">
+                                <label>Welche Note würden Sie allgemein dem Inhalt geben?</label><br>
+                                <i>( 1 = sehr gut, 6 = ungenügend )</i><br>
+                                <input type="radio" name="note_inhalt" value="1">1 |
+                                <input type="radio" name="note_inhalt" value="2">2 |
+                                <input type="radio" name="note_inhalt" value="3">3 |
+                                <input type="radio" name="note_inhalt" value="4">4 |
+                                <input type="radio" name="note_inhalt" value="5">5 |
+                                <input type="radio" name="note_inhalt" value="6">6 |
+                            </div>
+
+                            <div class="feedback__form">
+                                <label>Bewertung Kreativität:</label><br>
+                                <input type="range" name="auswertung" min="0" max="100" value="50" step="10"
+                                    onchange="rangevalue.value = value">
+                                Punkte:
+                                <output id="rangevalue">50</output>
+                            </div>
+
+                            <div class="feedback__form">
+                                <label>Und nun würden Sie Hamed ( Spitzname: Hamedkabir ) als guten Programmierer
+                                    akzeptieren ?</label><br>
+
+                                <input type="radio" name="hamed_accept" value="yes"><span
+                                    style="background-color: green; margin-right: 12%">Ja</span>
+                                <input type="radio" name="hamed_accept" value="no"><span
+                                    style="background-color: #8c2d2da1">Nein</span>
+                            </div>
+
+                            <div class="feedback__form" style="border: none">
+                                <label>Weitere Feedbacks oder Kommentare:</label><br>
+                                <textarea class="feedback__textarea" name="feedback_else"></textarea>
+                            </div>
+                            <input name="senden" class="feedback__button" type="submit" value="Überprüfen">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
