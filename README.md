@@ -14,3 +14,5 @@ Ist eine Seite, die der User sein Feedback abgeben kann
 - die Daten in Datenbank speichern, nach dem Erfolgreich Bestätigung
 ##Probleme
 - klein Problem nur am Anfang mit github (schau im Bild meinProblem_Git.png)
+##Copy Right
+Diese Website wurde von Hamed Sadegh entwickelt ©2019
