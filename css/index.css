@@ -293,6 +293,64 @@ section {
   color: wheat;
 }
 
+/*Erfolg Seite*/
+.erfolg__body {
+  color: white;
+  font-family: 'Montserrat-Alternates-Medium' !important;
+}
+
+.erfolg__container {
+  border: 1px solid #8c2d2da1;
+  max-width: 840px;
+  width: 78%;
+  margin-top: 120px;
+  padding: 40px;
+}
+
+.erfolg__check-col {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.erfolg__check-img {
+  width: 40%;
+}
+
+.erfolg__text-col {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.erfolg__button-col {
+  margin-top: 20px;
+  text-align: center;
+}
+.erfolg__ok-button {
+  font-family: 'Montserrat-Alternates-Medium' !important;
+  color: white;
+  border: 3px solid white;
+  text-decoration: none !important;
+  background-color: green;
+  padding: 10px 50px 10px 50px;
+  margin-top: 20px;
+
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transform: scale(1);
+  -webkit-animation-name: button_animation;
+  animation-name: button_animation;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+}
+
+.erfolg__ok-button:hover {
+  color: wheat;
+}
+
 @media(min-width: 768px) {
   .feedbackPHP__col-img {
     text-align: left;
