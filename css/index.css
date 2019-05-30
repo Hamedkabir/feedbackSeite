@@ -289,7 +289,8 @@ section {
   transition: 0.5s ease-in-out;
 }
 
-.feedbackPHP__bestaetigen:hover, .feedbackPHP__abbrechen:hover{
+.feedbackPHP__bestaetigen:hover,
+.feedbackPHP__abbrechen:hover {
   color: wheat;
 }
 
@@ -325,6 +326,7 @@ section {
   margin-top: 20px;
   text-align: center;
 }
+
 .erfolg__ok-button {
   font-family: 'Montserrat-Alternates-Medium' !important;
   color: white;
