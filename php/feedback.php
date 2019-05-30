@@ -80,8 +80,7 @@ if(empty($feedback_else)){
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md feedbackPHP__col-img">
-                        <img class="feedbackPHP__hamed-img"
-                            src="../media/myPics/fertig_Bearbeitet_schwarz-weiß-min.png">
+                        <img class="feedbackPHP__hamed-img" src="../media/myPics/fertig_Bearbeitet_schwarz-weiss.png">
                     </div>
                 </div>
                 <div class="row">
@@ -91,8 +90,6 @@ if(empty($feedback_else)){
                         </span>
                     </div>
                 </div>
-
-
             </div>
             <div class="col-md-6">
                 <div class="row feedbackPHP__table-rows">
@@ -159,17 +156,14 @@ if(empty($feedback_else)){
                 </div>
                 <div class="row" style="margin-bottom: 20px">
                     <div class="col-6">
-                            <a href="../erfolg.html" class="feedbackPHP__bestaetigen">Bestätigen</a>
+                        <a href="../erfolg.html" class="feedbackPHP__bestaetigen">Bestätigen</a>
                     </div>
                     <div class="col-6">
-                            <a href="../index.html" class="feedbackPHP__abbrechen">Abbrechen</a>
+                        <a href="../index.html" class="feedbackPHP__abbrechen">Abbrechen</a>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
     </div>
 </body>
 

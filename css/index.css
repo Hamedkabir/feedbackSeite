@@ -66,37 +66,17 @@ section {
 
 @keyframes button_animation {
   0% {
-    /* -webkit-border-before-color: white; */
     border-color: white;
   }
 
   50% {
-    /* -webkit-border-before-color: #8c2d2da1; */
     border-color: #8c2d2da1;
   }
 
   100% {
-    /* -webkit-border-before-color: white; */
     border-color: white;
   }
 }
-
-/* @-webkit-keyframes button_animation {
-  0% {
-    -webkit-border-before-color: white;
-    border-color: white;
-  }
-
-  50% {
-    -webkit-border-before-color: #8c2d2da1;
-    border-color: #8c2d2da1;
-  }
-
-  100% {
-    -webkit-border-before-color: white;
-    border-color: white;
-  }
-} */
 
 .index__spaceship-row {
   margin-top: 15px;
